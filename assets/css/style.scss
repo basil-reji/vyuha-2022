@@ -1,0 +1,169 @@
+@import './theme';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font2;
+    background-color: $color6;
+    color: $color1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font1;
+}
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 0;
+
+    // background-color: rgba($color: #000000, $alpha: 0.1);
+
+    .container {
+
+        .row {
+
+            // background-color: rgba($color: #000000, $alpha: 0.1);
+
+            .hero_intro {
+                position: relative;
+                display: flex;
+                min-height: 50vh;
+                padding: 0rem 2rem;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            #intro_txt {
+
+                // background-color: rgba($color: #000000, $alpha: 0.2);
+                a {
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                }
+
+                h2 {
+                    font-size: 5rem;
+                    font-weight: 600;
+                    color: $color1;
+                    margin-right: auto;
+
+                    span {
+                        color: $color4;
+                    }
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    width: 80%;
+                    margin-right: auto;
+                }
+
+                .btns {
+                    margin-top: 1rem;
+                    margin-right: auto;
+
+                    .btn {
+                        box-shadow: none;
+                        padding: 0.8rem 2.2rem;
+                        border-radius: 0.6rem;
+                        color: $color1;
+                        background-color: $color4;
+                        font-weight: 300;
+                        font-size: 1.05rem;
+                        transition: all 0.3s ease;
+
+                        box-shadow:
+                            10px 10px 40px rgba(0, 0, 0, 0.1);
+
+                        &:hover {
+                            box-shadow:
+                                10px 10px 40px rgba(0, 0, 0, 0.40);
+                        }
+                    }
+
+                    .btn-play {
+                        border: none;
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        border-radius: 5rem;
+                        background-color: $color2;
+                        margin: 0.5rem;
+                        margin-left: 2rem;
+                        color: $color1;
+                        transition: all 0.3s ease;
+
+                        box-shadow:
+                            10px 10px 40px rgba(0, 0, 0, 0.1);
+
+                        &:hover {
+                            box-shadow:
+                                10px 10px 40px rgba(0, 0, 0, 0.40);
+                        }
+                    }
+                }
+            }
+
+            #intro_img {
+                // background-color: rgba($color: #000000, $alpha: 0.1);
+                // pointer-events: none;
+                position: relative;
+
+                #dots {
+                    transform: translate(-50%, 0%);
+                }
+
+                #robo {
+                    pointer-events: none;
+                    position: absolute;
+                    width: 65%;
+
+                    #robot {
+                        width: 100%;
+                        animation: topDown 2.5s ease-in-out infinite alternate;
+                    }
+
+                    #doller {
+                        position: absolute;
+                        width: 8%;
+                        right: 3%;
+                        top: 3%;
+                    }
+                }
+
+                &::selection{
+                    background-color: transparent;
+                }
+
+            }
+
+
+        }
+    }
+
+}
+
+@keyframes topDown {
+    from {
+        transform: translate(0%, -5%);
+    }
+
+    to {
+        transform: translate(0%, 5%);
+    }
+}

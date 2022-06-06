@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0F172A;
+  color: #FFFFFF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Khand", sans-serif;
+}
+
+#hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+}
+
+#hero .container .row .hero_intro {
+  position: relative;
+  display: flex;
+  min-height: 50vh;
+  padding: 0rem 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#hero .container .row #intro_txt a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#hero .container .row #intro_txt h2 {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-right: auto;
+}
+
+#hero .container .row #intro_txt h2 span {
+  color: #0172FF;
+}
+
+#hero .container .row #intro_txt p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 80%;
+  margin-right: auto;
+}
+
+#hero .container .row #intro_txt .btns {
+  margin-top: 1rem;
+  margin-right: auto;
+}
+
+#hero .container .row #intro_txt .btns .btn {
+  box-shadow: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 0.6rem;
+  color: #FFFFFF;
+  background-color: #0172FF;
+  font-weight: 300;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+#hero .container .row #intro_txt .btns .btn:hover {
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+#hero .container .row #intro_txt .btns .btn-play {
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 5rem;
+  background-color: #FFB703;
+  margin: 0.5rem;
+  margin-left: 2rem;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+#hero .container .row #intro_txt .btns .btn-play:hover {
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+#hero .container .row #intro_img {
+  position: relative;
+}
+
+#hero .container .row #intro_img #dots {
+  transform: translate(-50%, 0%);
+}
+
+#hero .container .row #intro_img #robo {
+  pointer-events: none;
+  position: absolute;
+  width: 65%;
+}
+
+#hero .container .row #intro_img #robo #robot {
+  width: 100%;
+  animation: topDown 2.5s ease-in-out infinite alternate;
+}
+
+#hero .container .row #intro_img #robo #doller {
+  position: absolute;
+  width: 8%;
+  right: 3%;
+  top: 3%;
+}
+
+#hero .container .row #intro_img::selection {
+  background-color: transparent;
+}
+
+@keyframes topDown {
+  from {
+    transform: translate(0%, -5%);
+  }
+  to {
+    transform: translate(0%, 5%);
+  }
+}
