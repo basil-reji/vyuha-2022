@@ -4,6 +4,40 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 17px;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #0F172A;
@@ -19,6 +53,44 @@ h6 {
   font-family: "Khand", sans-serif;
 }
 
+#navbar {
+  position: fixed;
+  left: 50%;
+  bottom: 5%;
+  background: rgba(1, 114, 255, 0.1);
+  backdrop-filter: blur(1rem);
+  transform: translate(-50%, 0%);
+  padding: 0;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+  z-index: 998;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0.5rem;
+}
+
+#navbar ul li a {
+  margin: 0.1rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 300;
+}
+
+#navbar ul li a.active, #navbar ul li a:hover {
+  background-color: rgba(1, 114, 255, 0.85);
+}
+
 #hero {
   min-height: 100vh;
   display: flex;
@@ -28,19 +100,36 @@ h6 {
   top: 0;
 }
 
+#hero #tsparticles {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 #hero .container .row .hero_intro {
   position: relative;
   display: flex;
-  min-height: 50vh;
+  min-height: 40vh;
   padding: 0rem 2rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
+#hero .container .row #intro_txt {
+  padding: 2rem;
+}
+
 #hero .container .row #intro_txt a {
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+#hero .container .row #intro_txt a:active, #hero .container .row #intro_txt a:focus {
+  color: #0172FF;
 }
 
 #hero .container .row #intro_txt h2 {
@@ -83,6 +172,7 @@ h6 {
 }
 
 #hero .container .row #intro_txt .btns .btn-play {
+  cursor: pointer;
   border: none;
   width: 3.5rem;
   height: 3.5rem;
@@ -110,7 +200,7 @@ h6 {
 #hero .container .row #intro_img #robo {
   pointer-events: none;
   position: absolute;
-  width: 65%;
+  width: 75%;
 }
 
 #hero .container .row #intro_img #robo #robot {
