@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
 }
 
 html {
@@ -108,18 +109,18 @@ h6 {
         }
     }
 
-    z-index: 998;
+    z-index: 8;
 }
 
 section{
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 2rem 0rem;
+    padding: 4rem 0rem;
 
     .s_head{
-        margin: 2rem;
         position: relative;
+        margin: 2rem;
         width: 100%;
         height: 5rem;
 
@@ -141,7 +142,7 @@ section{
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                height: 0.2rem;
+                height: 0.1rem;
                 background-color: $color1;
                 z-index: 3;
             }
@@ -164,3 +165,34 @@ section{
 
 @import './sections/hero';
 @import './sections/about';
+@import './sections/events';
+
+footer{
+    position: relative;
+    min-height: 2rem;
+    z-index: 10;
+    background-color: rgba($color: $color6, $alpha: 1);
+
+    font-size: 0.8rem;
+    font-weight: 300;
+
+    .credits{
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .dev{
+        margin: 0.25rem;
+        a{
+            color: $color4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}

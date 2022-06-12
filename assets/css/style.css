@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
 }
 
 html {
@@ -80,7 +81,7 @@ h6 {
   padding: 0;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
   border-radius: 5rem;
-  z-index: 998;
+  z-index: 8;
 }
 
 #navbar ul {
@@ -113,12 +114,12 @@ section {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 2rem 0rem;
+  padding: 4rem 0rem;
 }
 
 section .s_head {
-  margin: 2rem;
   position: relative;
+  margin: 2rem;
   width: 100%;
   height: 5rem;
   display: flex;
@@ -140,7 +141,7 @@ section .s_head h2::after {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 0.2rem;
+  height: 0.1rem;
   background-color: #FFFFFF;
   z-index: 3;
 }
@@ -289,11 +290,12 @@ section .container {
 #hero::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1rem;
   left: 0;
   width: 100%;
   height: 25%;
   background: linear-gradient(to top, #0f172a, transparent);
+  z-index: 10;
 }
 
 @keyframes topDown {
@@ -313,6 +315,7 @@ section .container {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  z-index: 2;
 }
 
 #about .bg {
@@ -342,6 +345,7 @@ section .container {
   width: 100%;
   height: 55%;
   background: linear-gradient(to bottom, #0f172a, transparent);
+  z-index: 10;
 }
 
 #about .bg .filter::after {
@@ -415,4 +419,182 @@ section .container {
   height: 80%;
   border: 2px solid #0172FF;
   border-radius: 2rem;
+}
+
+#events {
+  position: relative;
+  min-height: 50vh;
+  background: #0F172A;
+}
+
+#events .card {
+  background-color: transparent;
+  min-height: 5rem;
+  border: 2px solid #0172FF;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#events .card .img_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid #0172FF;
+  border-radius: 1rem;
+}
+
+#events .card .img_box img {
+  width: 100%;
+}
+
+#events .card .card-body {
+  margin: 1.5rem 0.2rem;
+  padding: 0;
+}
+
+#events .card .card-body h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+#events .card .card-body p {
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#events .card .card-footer {
+  padding: 0;
+  padding: 0 0.2rem;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+#events .card .card-footer .dt {
+  margin-right: auto;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+#events .card .card-footer .dt .date {
+  color: #FFFFFF;
+}
+
+#events .card .card-footer .dt .time {
+  color: #0172FF;
+}
+
+#events .card .card-footer .btn {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #0172FF;
+  font-size: 0.9rem;
+  padding: 0.3rem 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  box-shadow: none;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+#events .card .card-footer .btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -40%;
+  background-color: #0172FF;
+  width: 200%;
+  height: 500%;
+  transform: translate(-65%, -25%) rotate(60deg);
+  z-index: -1;
+}
+
+#events .card .card-footer .btn:hover {
+  color: #FFFFFF;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+#events .card .card-footer .btn:hover::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+#events .card:hover {
+  background-color: #0172FF;
+  transform: translate(0%, -2%);
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+#events .card:hover .img_box img {
+  transform: scale(1.1);
+}
+
+#events .card:hover .card-footer .dt .date {
+  color: #FFFFFF;
+}
+
+#events .card:hover .card-footer .dt .time {
+  color: #0F172A;
+}
+
+#events .card:hover .card-footer .btn {
+  border: 1px solid #0F172A;
+  transition: all 0.3s ease-in-out;
+}
+
+#events .card:hover .card-footer .btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -40%;
+  background-color: #0F172A;
+  width: 200%;
+  height: 500%;
+  transform: translate(-65%, -25%) rotate(60deg);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+#events .card:hover .card-footer .btn:hover {
+  color: #FFFFFF;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+#events .card:hover .card-footer .btn:hover::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+footer {
+  position: relative;
+  min-height: 2rem;
+  z-index: 10;
+  background-color: #0f172a;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+footer .credits {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer .dev {
+  margin: 0.25rem;
+}
+
+footer .dev a {
+  color: #0172FF;
+  text-decoration: none;
+  font-weight: 600;
 }
