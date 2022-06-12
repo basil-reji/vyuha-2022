@@ -1,0 +1,120 @@
+#about {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+
+    background-image: url('/assets/img/GECW.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        z-index: 1;
+
+        .filter {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            min-height: 100%;
+            background-color: rgba($color: $color6, $alpha: 0.80);
+            z-index: 1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 55%;
+                background: linear-gradient(to bottom, rgba($color: $color6, $alpha: 1), transparent);
+                // background-color: $color1;
+                // z-index: 10;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 45%;
+                background: linear-gradient(to top, rgba($color: $color6, $alpha: 1), transparent);
+                // background-color: $color1;
+                // z-index: 10;
+            }
+        }
+
+    }
+
+    .row {
+        min-height: 50vh;
+
+        .ins {
+            background-color: transparent;
+            min-height: 10rem;
+            // border: 1px solid $color4;
+
+            h3 {
+                color: $color4;
+            }
+
+            p {
+                font-family: $font2;
+                font-weight: 200;
+                color: rgba($color: $color1, $alpha: 0.9);
+            }
+        }
+
+        .card {
+            position: relative;
+            background: transparent;
+            padding: 3rem;
+            display: flex;
+            justify-content: center;
+            border: none;
+            align-items: center;
+
+            .box {
+                position: relative;
+                height: 20rem;
+                width: 20rem;
+
+                .lbox{
+                    background-color: $color6;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.3s ease;
+
+                    img{
+                        height: 80%;
+                        width: auto;
+                    }
+
+                    &.trans{
+                        transform: translate(-40%,-50%) rotate(10deg);
+                    }
+                }
+
+                .ibox{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 80%;
+                    height: 80%;
+                    // background-color: $color4;
+                    border: 2px solid $color4;
+                    border-radius: 2rem;
+                }
+            }
+        }
+    }
+}

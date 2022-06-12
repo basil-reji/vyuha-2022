@@ -14,7 +14,7 @@
                     enable: true,
                     area: 800
                 },
-                value: 50
+                value: 100
             },
             opacity: {
                 // animation: {
@@ -40,7 +40,7 @@
     });
 })();
 
-(function () {
+(() => {
     "use strict";
 
     /**
@@ -77,26 +77,56 @@
     }
 
     /**
-     * Scrool with ofset on links with a class name .scrollto
+     * Navbar links active state on scroll
      */
-    on('click', '.scrollto', function (e) {
-        if (select(this.hash)) {
-            e.preventDefault()
-
-            let navbar = select('#navbar')
-            if (navbar.classList.contains('navbar-mobile')) {
-                navbar.classList.remove('navbar-mobile')
-                let navbarToggle = select('.mobile-nav-toggle')
-                navbarToggle.classList.toggle('bi-list')
-                navbarToggle.classList.toggle('bi-x')
+    let navbarlinks = select('#navbar .scrollto', true)
+    const navbarlinksActive = () => {
+        let position = window.scrollY + 200
+        navbarlinks.forEach(navbarlink => {
+            if (!navbarlink.hash) return
+            let section = select(navbarlink.hash)
+            if (!section) return
+            if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+                navbarlink.classList.add('active')
+            } else {
+                navbarlink.classList.remove('active')
             }
-            scrollto(this.hash)
-        }
-    }, true)
+        })
+    }
+    window.addEventListener('load', navbarlinksActive)
+    onscroll(document, navbarlinksActive)
 
     /**
-     * Scroll with ofset on page load with hash links in the url
+     * Scrolls to an element with header offset
      */
+    // const scrollto = (el) => {
+    //     let header = select('#header')
+    //     let offset = header.offsetHeight
+
+    //     let elementPos = select(el).offsetTop
+    //     window.scrollTo({
+    //         top: elementPos - offset,
+    //         behavior: 'smooth'
+    //     })
+    // }
+
+
+    // /**
+    //  * Back to top button
+    //  */
+    // let backtotop = select('.back-to-top')
+    // if (backtotop) {
+    //     const toggleBacktotop = () => {
+    //         if (window.scrollY > 100) {
+    //             backtotop.classList.add('active')
+    //         } else {
+    //             backtotop.classList.remove('active')
+    //         }
+    //     }
+    //     window.addEventListener('load', toggleBacktotop)
+    //     onscroll(document, toggleBacktotop)
+    // }
+
     window.addEventListener('load', () => {
         if (window.location.hash) {
             if (select(window.location.hash)) {
@@ -118,3 +148,27 @@
     });
 
 })()
+
+var isInViewport = function (elem) {
+    var distance = elem.getBoundingClientRect();
+    return (
+        distance.top >= 0 &&
+        distance.left >= 0 &&
+        distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+window.addEventListener('scroll', function (event) {
+    var lbox = document.querySelectorAll('.lbox');
+    lbox.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add("trans");
+        }else{
+            element.classList.remove("trans")
+        }
+    });
+}, false);
+
+
+feather.replace()

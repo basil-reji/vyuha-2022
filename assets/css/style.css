@@ -6,6 +6,7 @@
 
 html {
   font-size: 16px;
+  width: 100%;
 }
 
 @media screen and (max-width: 480px) {
@@ -38,10 +39,26 @@ html {
   }
 }
 
+::-webkit-scrollbar-track {
+  background-color: #0F172A;
+}
+
+::-webkit-scrollbar {
+  border-radius: 1rem;
+  width: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #0172FF;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #0F172A;
   color: #FFFFFF;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1,
@@ -56,9 +73,9 @@ h6 {
 #navbar {
   position: fixed;
   left: 50%;
-  bottom: 5%;
-  background: rgba(1, 114, 255, 0.1);
-  backdrop-filter: blur(1rem);
+  bottom: 1rem;
+  background: rgba(1, 114, 255, 0.05);
+  backdrop-filter: blur(0.5rem);
   transform: translate(-50%, 0%);
   padding: 0;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
@@ -85,10 +102,59 @@ h6 {
   text-decoration: none;
   color: #FFFFFF;
   font-weight: 300;
+  transition: all 0.3s ease-in-out;
 }
 
 #navbar ul li a.active, #navbar ul li a:hover {
-  background-color: rgba(1, 114, 255, 0.85);
+  background-color: #0172ff;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0rem;
+}
+
+section .s_head {
+  margin: 2rem;
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+section .s_head h2 {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+section .s_head h2::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #FFFFFF;
+  z-index: 3;
+}
+
+section .s_head p {
+  margin: 0.5rem 0rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+section .container {
+  position: relative;
+  z-index: 2;
 }
 
 #hero {
@@ -191,6 +257,7 @@ h6 {
 
 #hero .container .row #intro_img {
   position: relative;
+  z-index: 5;
 }
 
 #hero .container .row #intro_img #dots {
@@ -219,6 +286,16 @@ h6 {
   background-color: transparent;
 }
 
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(to top, #0f172a, transparent);
+}
+
 @keyframes topDown {
   from {
     transform: translate(0%, -5%);
@@ -226,4 +303,116 @@ h6 {
   to {
     transform: translate(0%, 5%);
   }
+}
+
+#about {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  background-image: url("/assets/img/GECW.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#about .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#about .bg .filter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(15, 23, 42, 0.8);
+  z-index: 1;
+}
+
+#about .bg .filter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(to bottom, #0f172a, transparent);
+}
+
+#about .bg .filter::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  background: linear-gradient(to top, #0f172a, transparent);
+}
+
+#about .row {
+  min-height: 50vh;
+}
+
+#about .row .ins {
+  background-color: transparent;
+  min-height: 10rem;
+}
+
+#about .row .ins h3 {
+  color: #0172FF;
+}
+
+#about .row .ins p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#about .row .card {
+  position: relative;
+  background: transparent;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  border: none;
+  align-items: center;
+}
+
+#about .row .card .box {
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+}
+
+#about .row .card .box .lbox {
+  background-color: #0F172A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#about .row .card .box .lbox img {
+  height: 80%;
+  width: auto;
+}
+
+#about .row .card .box .lbox.trans {
+  transform: translate(-40%, -50%) rotate(10deg);
+}
+
+#about .row .card .box .ibox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border: 2px solid #0172FF;
+  border-radius: 2rem;
 }
