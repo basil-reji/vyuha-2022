@@ -493,7 +493,7 @@ section .container {
 #events .card .card-footer .btn {
   position: relative;
   background-color: transparent;
-  border: 1px solid #0172FF;
+  border: 2px solid #0172FF;
   font-size: 0.9rem;
   padding: 0.3rem 1rem;
   color: rgba(255, 255, 255, 0.8);
@@ -543,7 +543,7 @@ section .container {
 }
 
 #events .card:hover .card-footer .btn {
-  border: 1px solid #0F172A;
+  border: 2px solid #0F172A;
   transition: all 0.3s ease-in-out;
 }
 
