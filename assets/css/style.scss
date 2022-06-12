@@ -64,6 +64,51 @@ h6 {
     font-family: $font1;
 }
 
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: $color6;
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: calc(50% - 0px);
+        left: calc(50% - 30px);
+        border: 6px solid $color4;
+        border-top-color: rgba($color: #000000, $alpha: 0.2);
+        border-bottom-color: rgba($color: #000000, $alpha: 0.2);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: animate-preloader 1s linear infinite;
+        z-index: 100;
+    }
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 #navbar {
     position: fixed;
@@ -112,13 +157,13 @@ h6 {
     z-index: 8;
 }
 
-section{
+section {
     position: relative;
     width: 100%;
     overflow: hidden;
     padding: 4rem 0rem;
 
-    .s_head{
+    .s_head {
         position: relative;
         margin: 2rem;
         width: 100%;
@@ -131,12 +176,12 @@ section{
 
         z-index: 2;
 
-        h2{
+        h2 {
             position: relative;
             font-size: 3rem;
             font-weight: 400;
 
-            &::after{
+            &::after {
                 position: absolute;
                 content: '';
                 left: 0;
@@ -148,7 +193,7 @@ section{
             }
         }
 
-        p{
+        p {
             margin: 0.5rem 0rem;
             font-family: $font2;
             font-weight: 200;
@@ -157,7 +202,7 @@ section{
         }
     }
 
-    .container{
+    .container {
         position: relative;
         z-index: 2;
     }
@@ -167,7 +212,7 @@ section{
 @import './sections/about';
 @import './sections/events';
 
-footer{
+footer {
     position: relative;
     min-height: 2rem;
     z-index: 10;
@@ -176,7 +221,7 @@ footer{
     font-size: 0.8rem;
     font-weight: 300;
 
-    .credits{
+    .credits {
         height: 100%;
         width: 100%;
         padding: 1rem;
@@ -187,9 +232,10 @@ footer{
         background-color: rgba($color: #000000, $alpha: 0.5);
     }
 
-    .dev{
+    .dev {
         margin: 0.25rem;
-        a{
+
+        a {
             color: $color4;
             text-decoration: none;
             font-weight: 600;
