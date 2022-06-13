@@ -154,6 +154,37 @@
         });
     });
 
+    /**
+   * Porfolio isotope and filter
+   */
+    window.addEventListener('load', () => {
+        let isotopeContainer = select('.isotope-container');
+        if (isotopeContainer) {
+            let isotopeIsotope = new Isotope(isotopeContainer, {
+                itemSelector: '.isotope-item',
+            });
+        }
+
+    });
+
+    const glightbox = GLightbox({
+        selector: '.glightbox'
+    });
+
+    let portfolionIsotope = document.querySelector('.portfolio-isotope');
+
+    if (portfolionIsotope) {
+
+        window.addEventListener('load', () => {
+            let portfolioIsotope = new Isotope(document.querySelector('.portfolio-container'), {
+                itemSelector: '.portfolio-item',
+                layoutMode: portfolioLayout,
+                filter: portfolioFilter,
+                sortBy: portfolioSort
+            });
+        });
+    }
+
 })()
 
 var isInViewport = function (elem) {
@@ -171,7 +202,7 @@ window.addEventListener('scroll', function (event) {
     lbox.forEach(element => {
         if (isInViewport(element)) {
             element.classList.add("trans");
-        }else{
+        } else {
             element.classList.remove("trans")
         }
     });
