@@ -704,7 +704,6 @@ section .container {
 }
 
 .faq .img {
-  transform: translate(0%, -10%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
