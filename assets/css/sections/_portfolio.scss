@@ -26,10 +26,16 @@
         // border: 1px solid $color1;
         overflow: hidden;
         z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {
-            height: 100%;
-            width:fit-content;
+            position: relative;
+            display: inline-block;
+            height: max-content;
+            width: auto;
+            // width:fit-content;
             filter: grayscale(0.85);
         }
 

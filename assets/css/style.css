@@ -149,7 +149,7 @@ section {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 2rem 0rem;
+  padding: 3rem 0rem;
 }
 
 section .s_head {
@@ -234,14 +234,14 @@ section .container {
   color: #0172FF;
 }
 
-#hero .container .row #intro_txt h2 {
+#hero .container .row #intro_txt h1 {
   font-size: 5rem;
   font-weight: 600;
   color: #FFFFFF;
   margin-right: auto;
 }
 
-#hero .container .row #intro_txt h2 span {
+#hero .container .row #intro_txt h1 span {
   color: #0172FF;
 }
 
@@ -632,11 +632,16 @@ section .container {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #gallery .portfolio-item img {
-  height: 100%;
-  width: fit-content;
+  position: relative;
+  display: inline-block;
+  height: max-content;
+  width: auto;
   filter: grayscale(0.85);
 }
 
@@ -692,6 +697,96 @@ section .container {
 #gallery .portfolio-item:hover .portfolio-info {
   opacity: 1;
   inset: auto 10px 0 10px;
+}
+
+.faq {
+  background-color: #0F172A;
+}
+
+.faq .img {
+  transform: translate(0%, -10%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 400px;
+}
+
+.faq .accordion-flush .accordion-item {
+  border: 2px solid #0172FF;
+}
+
+.faq .accordion-flush .accordion-item:last-child, .faq .accordion-flush .accordion-item:first-child {
+  border: 2px solid #0172FF;
+}
+
+.faq .accordion-item {
+  margin: 1rem 0rem;
+  background: transparent;
+  border: 2px solid #0172FF;
+  border-bottom: 2px solid #FFFFFF;
+  border-radius: 1rem;
+}
+
+.faq .accordion-item .accordion-header {
+  background-color: transparent;
+}
+
+.faq .accordion-item .accordion-header .accordion-button {
+  background-color: transparent;
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 3rem;
+  box-shadow: none;
+}
+
+.faq .accordion-item .accordion-header .accordion-button .question-icon {
+  position: absolute;
+  color: #0172FF;
+  left: 1rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 1.3rem;
+  transition: all 0s ease;
+}
+
+.faq .accordion-item .accordion-header .accordion-button .arrow {
+  position: absolute;
+  right: 1rem;
+  transition: all 0.3s ease;
+  color: #0172FF;
+}
+
+.faq .accordion-item .accordion-header .accordion-button::after {
+  display: none;
+}
+
+.faq .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  font-weight: 400;
+  color: #0172FF;
+  box-shadow: none;
+}
+
+.faq .accordion-item .accordion-header .accordion-button:not(.collapsed) .arrow {
+  color: #0172FF;
+  transform: rotate(180deg);
+}
+
+.faq .accordion-item .accordion-body {
+  margin: 0;
+  padding: 1rem 3rem;
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.faq .accordion-item .accordion-collapse {
+  border: 0;
 }
 
 footer {

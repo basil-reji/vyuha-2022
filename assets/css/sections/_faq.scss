@@ -1,0 +1,109 @@
+.faq {
+    background-color: $color6;
+
+    // .content {
+
+    //     h3{
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //     }
+
+    //     p {
+    //         font-size: 15px;
+    //         color: $color6;
+    //     }
+    // }
+
+    .img {
+        transform: translate(0%,-10%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 400px;
+    }
+
+    .accordion-flush .accordion-item {
+
+        border: 2px solid $color4;
+
+        &:last-child,
+        &:first-child {
+
+            border: 2px solid $color4;
+        }
+
+    }
+
+    .accordion-item {
+        margin: 1rem 0rem;
+        background: transparent;
+        border: 2px solid $color4;
+        border-bottom: 2px solid $color1;
+        border-radius: 1rem;
+
+        .accordion-header {
+            background-color: transparent;
+
+            .accordion-button {
+                background-color: transparent;
+                // border: 2px solid $color4;
+                color: $color1;
+                font-size: 1.3rem;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+                padding: 0.8rem 3rem;
+
+                .question-icon {
+                    position: absolute;
+                    color: $color4;
+                    left: 1rem;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    font-size: 1.3rem;
+                    transition: all 0s ease;
+                }
+
+                box-shadow: none;
+
+                .arrow{
+                    position: absolute;
+                    right: 1rem;
+                    transition: all 0.3s ease;
+                    color: $color4;
+                }
+
+                &::after {
+                    display: none;
+                }
+
+                &:not(.collapsed) {
+                    font-weight: 400;
+                    color: $color4;
+                    box-shadow: none;
+
+                    .arrow{
+                        color: $color4;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        .accordion-body {
+            margin: 0;
+            padding: 1rem 3rem;
+            border: 0;
+            background-color: transparent;
+            box-shadow: none;
+            font-family: $font2;
+            font-weight: 200;
+            font-size: 1rem;
+        }
+
+        .accordion-collapse {
+            border: 0;
+        }
+    }
+}

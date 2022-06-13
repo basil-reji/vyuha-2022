@@ -161,7 +161,7 @@ section {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 2rem 0rem;
+    padding: 3rem 0rem;
 
     .s_head {
         // background-color: rgba($color: #000000, $alpha: 0.1);
@@ -213,6 +213,7 @@ section {
 @import './sections/about';
 @import './sections/events';
 @import './sections/portfolio';
+@import './sections/faq';
 
 footer {
     position: relative;
