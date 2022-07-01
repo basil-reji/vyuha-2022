@@ -9,31 +9,26 @@ html {
   font-size: 16px;
   width: 100%;
 }
-
 @media screen and (max-width: 480px) {
   html {
     font-size: 13px;
   }
 }
-
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   html {
     font-size: 14px;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   html {
     font-size: 15px;
   }
 }
-
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   html {
     font-size: 16px;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 17px;
@@ -81,7 +76,6 @@ h6 {
   overflow: hidden;
   background: #0F172A;
 }
-
 #preloader::before {
   content: "";
   position: fixed;
@@ -97,6 +91,14 @@ h6 {
   z-index: 100;
 }
 
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes animate-preloader {
   0% {
     transform: rotate(0deg);
@@ -105,7 +107,6 @@ h6 {
     transform: rotate(360deg);
   }
 }
-
 #navbar {
   position: fixed;
   left: 50%;
@@ -118,14 +119,12 @@ h6 {
   border-radius: 5rem;
   z-index: 8;
 }
-
 #navbar ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0.3rem 0.5rem;
 }
-
 #navbar ul li a {
   margin: 0.1rem;
   width: 3rem;
@@ -140,7 +139,6 @@ h6 {
   font-weight: 300;
   transition: all 0.3s ease-in-out;
 }
-
 #navbar ul li a.active, #navbar ul li a:hover {
   background-color: #0172ff;
 }
@@ -151,7 +149,6 @@ section {
   overflow: hidden;
   padding: 3rem 0rem;
 }
-
 section .s_head {
   position: relative;
   margin: 2rem 0rem 4rem 0rem;
@@ -163,16 +160,14 @@ section .s_head {
   flex-direction: column;
   z-index: 2;
 }
-
 section .s_head h2 {
   position: relative;
   font-size: 3rem;
   font-weight: 400;
 }
-
 section .s_head h2::after {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   bottom: 0;
   width: 100%;
@@ -180,14 +175,12 @@ section .s_head h2::after {
   background-color: #FFFFFF;
   z-index: 3;
 }
-
 section .s_head p {
   margin: 0.5rem 0rem;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   color: rgba(255, 255, 255, 0.5);
 }
-
 section .container {
   position: relative;
   z-index: 2;
@@ -201,7 +194,6 @@ section .container {
   position: relative;
   top: 0;
 }
-
 #hero #tsparticles {
   width: 100%;
   height: 100%;
@@ -210,7 +202,6 @@ section .container {
   left: 0;
   z-index: -1;
 }
-
 #hero .container .row .hero_intro {
   position: relative;
   display: flex;
@@ -220,43 +211,40 @@ section .container {
   align-items: center;
   flex-direction: column;
 }
-
 #hero .container .row #intro_txt {
   padding: 2rem;
 }
-
 #hero .container .row #intro_txt a {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
 #hero .container .row #intro_txt a:active, #hero .container .row #intro_txt a:focus {
   color: #0172FF;
 }
-
 #hero .container .row #intro_txt h1 {
   font-size: 5rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #0172FF;
   margin-right: auto;
 }
-
 #hero .container .row #intro_txt h1 span {
-  color: #0172FF;
+  color: #FFB703;
 }
-
 #hero .container .row #intro_txt p {
   font-size: 1.2rem;
   font-weight: 300;
-  width: 80%;
+  width: 70%;
   margin-right: auto;
 }
-
+@media screen and (max-width: 992px) {
+  #hero .container .row #intro_txt p {
+    width: 90%;
+  }
+}
 #hero .container .row #intro_txt .btns {
   margin-top: 1rem;
   margin-right: auto;
 }
-
 #hero .container .row #intro_txt .btns .btn {
   box-shadow: none;
   padding: 0.8rem 2.2rem;
@@ -268,11 +256,9 @@ section .container {
   transition: all 0.3s ease;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
 }
-
 #hero .container .row #intro_txt .btns .btn:hover {
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
 }
-
 #hero .container .row #intro_txt .btns .btn-play {
   cursor: pointer;
   border: none;
@@ -286,44 +272,36 @@ section .container {
   transition: all 0.3s ease;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
 }
-
 #hero .container .row #intro_txt .btns .btn-play:hover {
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
 }
-
 #hero .container .row #intro_img {
   position: relative;
   z-index: 5;
 }
-
 #hero .container .row #intro_img #dots {
   transform: translate(-50%, 0%);
 }
-
 #hero .container .row #intro_img #robo {
   pointer-events: none;
   position: absolute;
   width: 75%;
 }
-
 #hero .container .row #intro_img #robo #robot {
   width: 100%;
   animation: topDown 2.5s ease-in-out infinite alternate;
 }
-
 #hero .container .row #intro_img #robo #doller {
   position: absolute;
   width: 8%;
   right: 3%;
   top: 3%;
 }
-
 #hero .container .row #intro_img::selection {
   background-color: transparent;
 }
-
 #hero::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1rem;
   left: 0;
@@ -341,7 +319,6 @@ section .container {
     transform: translate(0%, 5%);
   }
 }
-
 #about {
   position: relative;
   width: 100%;
@@ -351,7 +328,6 @@ section .container {
   background-attachment: fixed;
   z-index: 2;
 }
-
 #about .bg {
   position: absolute;
   left: 0;
@@ -360,7 +336,6 @@ section .container {
   height: 100%;
   z-index: 1;
 }
-
 #about .bg .filter {
   position: absolute;
   left: 0;
@@ -370,9 +345,8 @@ section .container {
   background-color: rgba(15, 23, 42, 0.8);
   z-index: 1;
 }
-
 #about .bg .filter::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -381,9 +355,8 @@ section .container {
   background: linear-gradient(to bottom, #0f172a, transparent);
   z-index: 10;
 }
-
 #about .bg .filter::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -391,26 +364,22 @@ section .container {
   height: 45%;
   background: linear-gradient(to top, #0f172a, transparent);
 }
-
 #about .row {
   min-height: 50vh;
 }
-
 #about .row .ins {
   background-color: transparent;
   min-height: 10rem;
 }
-
 #about .row .ins h3 {
+  font-size: 2rem;
   color: #0172FF;
 }
-
 #about .row .ins p {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   color: rgba(255, 255, 255, 0.9);
 }
-
 #about .row .card {
   position: relative;
   background: transparent;
@@ -420,13 +389,11 @@ section .container {
   border: none;
   align-items: center;
 }
-
 #about .row .card .box {
   position: relative;
   height: 20rem;
   width: 20rem;
 }
-
 #about .row .card .box .lbox {
   background-color: #0F172A;
   display: flex;
@@ -434,16 +401,13 @@ section .container {
   align-items: center;
   transition: all 0.3s ease;
 }
-
 #about .row .card .box .lbox img {
   height: 80%;
   width: auto;
 }
-
 #about .row .card .box .lbox.trans {
   transform: translate(-40%, -50%) rotate(10deg);
 }
-
 #about .row .card .box .ibox {
   position: absolute;
   left: 50%;
@@ -460,7 +424,6 @@ section .container {
   min-height: 100vh;
   background: #0F172A;
 }
-
 #events .card {
   background-color: transparent;
   min-height: 5rem;
@@ -469,7 +432,6 @@ section .container {
   padding: 1rem;
   margin: 0.8rem 0rem;
 }
-
 #events .card .img_box {
   width: 100%;
   display: flex;
@@ -479,27 +441,22 @@ section .container {
   border: 2px solid #0172FF;
   border-radius: 1rem;
 }
-
 #events .card .img_box img {
   width: 100%;
 }
-
 #events .card .card-body {
   margin: 1.5rem 0.2rem;
   padding: 0;
 }
-
 #events .card .card-body h4 {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
 }
-
 #events .card .card-body p {
   font-size: 0.8rem;
   font-weight: 200;
   color: rgba(255, 255, 255, 0.8);
 }
-
 #events .card .card-footer {
   padding: 0;
   padding: 0 0.2rem;
@@ -509,21 +466,17 @@ section .container {
   display: flex;
   align-items: center;
 }
-
 #events .card .card-footer .dt {
   margin-right: auto;
   font-size: 0.8rem;
   font-weight: 400;
 }
-
 #events .card .card-footer .dt .date {
   color: #FFFFFF;
 }
-
 #events .card .card-footer .dt .time {
   color: #0172FF;
 }
-
 #events .card .card-footer .btn {
   position: relative;
   background-color: transparent;
@@ -536,9 +489,8 @@ section .container {
   overflow: hidden;
   transition: all 0.4s ease-in-out;
 }
-
 #events .card .card-footer .btn::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: -40%;
@@ -548,41 +500,33 @@ section .container {
   transform: translate(-65%, -25%) rotate(60deg);
   z-index: -1;
 }
-
 #events .card .card-footer .btn:hover {
   color: #FFFFFF;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.25);
 }
-
 #events .card .card-footer .btn:hover::after {
   transform: translateY(-50%) rotate(45deg);
 }
-
 #events .card:hover {
   background-color: #0172FF;
   transform: translate(0%, -2%);
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
 }
-
 #events .card:hover .img_box img {
   transform: scale(1.1);
 }
-
 #events .card:hover .card-footer .dt .date {
   color: #FFFFFF;
 }
-
 #events .card:hover .card-footer .dt .time {
   color: #0F172A;
 }
-
 #events .card:hover .card-footer .btn {
   border: 2px solid #0F172A;
   transition: all 0.3s ease-in-out;
 }
-
 #events .card:hover .card-footer .btn::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: -40%;
@@ -593,12 +537,10 @@ section .container {
   z-index: -1;
   transition: all 0.3s ease-in-out;
 }
-
 #events .card:hover .card-footer .btn:hover {
   color: #FFFFFF;
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.25);
 }
-
 #events .card:hover .card-footer .btn:hover::after {
   transform: translateY(-50%) rotate(45deg);
 }
@@ -607,14 +549,12 @@ section .container {
   position: relative;
   background-color: #0F172A;
 }
-
 #gallery .portfolio-flters {
   padding: 0;
   margin: 0 auto 30px auto;
   list-style: none;
   text-align: center;
 }
-
 #gallery .portfolio-flters li {
   cursor: pointer;
   display: inline-block;
@@ -626,7 +566,6 @@ section .container {
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
-
 #gallery .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -635,7 +574,6 @@ section .container {
   justify-content: center;
   align-items: center;
 }
-
 #gallery .portfolio-item img {
   position: relative;
   display: inline-block;
@@ -643,7 +581,6 @@ section .container {
   width: auto;
   filter: grayscale(0.85);
 }
-
 #gallery .portfolio-item:before {
   content: "";
   inset: 0;
@@ -651,8 +588,8 @@ section .container {
   background: rgba(15, 23, 42, 0.2);
   z-index: 2;
   transition: 0.5s;
+  pointer-events: none;
 }
-
 #gallery .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;
@@ -661,14 +598,12 @@ section .container {
   transition: all ease-in-out 0.3s;
   padding: 20px;
 }
-
 #gallery .portfolio-item .portfolio-info h4 {
   font-size: 18px;
   font-weight: 600;
   color: #FFFFFF;
   padding-right: 50px;
 }
-
 #gallery .portfolio-item .portfolio-info .preview-link {
   position: absolute;
   right: 5%;
@@ -678,21 +613,17 @@ section .container {
   transition: 0.3s;
   line-height: 0;
 }
-
 #gallery .portfolio-item .portfolio-info .preview-link:hover {
   color: #FFFFFF;
 }
-
 #gallery .portfolio-item:hover:before {
   visibility: visible;
   background: rgba(15, 23, 42, 0.7);
 }
-
 #gallery .portfolio-item:hover img {
   transform: scale(1.2);
   filter: grayscale(0);
 }
-
 #gallery .portfolio-item:hover .portfolio-info {
   opacity: 1;
   inset: auto 10px 0 10px;
@@ -701,22 +632,18 @@ section .container {
 .faq {
   background-color: #0F172A;
 }
-
 .faq .img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 400px;
 }
-
 .faq .accordion-flush .accordion-item {
   border: 2px solid #0172FF;
 }
-
 .faq .accordion-flush .accordion-item:last-child, .faq .accordion-flush .accordion-item:first-child {
   border: 2px solid #0172FF;
 }
-
 .faq .accordion-item {
   margin: 1rem 0rem;
   background: transparent;
@@ -724,11 +651,9 @@ section .container {
   border-bottom: 2px solid #FFFFFF;
   border-radius: 1rem;
 }
-
 .faq .accordion-item .accordion-header {
   background-color: transparent;
 }
-
 .faq .accordion-item .accordion-header .accordion-button {
   background-color: transparent;
   color: #FFFFFF;
@@ -739,7 +664,6 @@ section .container {
   padding: 0.8rem 3rem;
   box-shadow: none;
 }
-
 .faq .accordion-item .accordion-header .accordion-button .question-icon {
   position: absolute;
   color: #0172FF;
@@ -749,29 +673,24 @@ section .container {
   font-size: 1.3rem;
   transition: all 0s ease;
 }
-
 .faq .accordion-item .accordion-header .accordion-button .arrow {
   position: absolute;
   right: 1rem;
   transition: all 0.3s ease;
   color: #0172FF;
 }
-
 .faq .accordion-item .accordion-header .accordion-button::after {
   display: none;
 }
-
 .faq .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   font-weight: 400;
   color: #0172FF;
   box-shadow: none;
 }
-
 .faq .accordion-item .accordion-header .accordion-button:not(.collapsed) .arrow {
   color: #0172FF;
   transform: rotate(180deg);
 }
-
 .faq .accordion-item .accordion-body {
   margin: 0;
   padding: 1rem 3rem;
@@ -782,7 +701,6 @@ section .container {
   font-weight: 200;
   font-size: 1rem;
 }
-
 .faq .accordion-item .accordion-collapse {
   border: 0;
 }
@@ -795,7 +713,6 @@ footer {
   font-size: 0.8rem;
   font-weight: 300;
 }
-
 footer .credits {
   height: 100%;
   width: 100%;
@@ -806,11 +723,9 @@ footer .credits {
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 footer .dev {
   margin: 0.25rem;
 }
-
 footer .dev a {
   color: #0172FF;
   text-decoration: none;
