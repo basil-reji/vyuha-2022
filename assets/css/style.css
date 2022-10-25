@@ -731,3 +731,11 @@ footer .dev a {
   text-decoration: none;
   font-weight: 600;
 }
+
+/* by am60 */
+
+.padding{
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-bottom: 10vw;
+}
